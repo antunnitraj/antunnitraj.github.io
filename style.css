@@ -1,0 +1,212 @@
+:root {
+    --bg: #242424;
+    --bg2: #1f1f1f;
+    --lblue: #b3d7ff;
+    --blue: #348ceb;
+    --gray: #888;
+}
+
+hr {
+    width: 50%;
+}
+
+html {
+	scroll-behavior: smooth;
+    background: var(--bg);
+    color: white;
+    font-family: sans-serif;
+}
+
+header, footer {
+    background: var(--blue);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 9em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+main {
+    background: var(--bg2);
+    margin: 10em auto 1em auto;
+    clear: both;
+    width: 60%;
+    padding: 5px 30px 0 30px;
+}
+
+#logo {
+    display: block;
+    float: none;
+    height: 75%;
+    clear: both;
+    margin: 0 auto 0 auto;
+}
+
+nav {
+    float: none;
+    height: 25%;
+    margin: 0 auto 0 auto;
+}
+
+nav ul {
+	list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+
+nav ul li {
+	display: inline;
+}
+
+nav ul li a {
+	margin-right: 25px;
+    padding-right: 23px;
+    border-right: 2px solid white;
+	font-size: 1em;
+}
+
+nav ul li:first-child {
+	margin-left: 25px;
+    padding-left: 23px;
+    border-left: 2px solid white;
+}
+
+a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+    padding: 15px;
+}
+
+.lightblue {
+	color: var(--lblue);	
+}
+
+h1, h2, h3 {
+	font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+	font-weight: normal;
+}
+
+article {
+	clear: both;	
+	border-bottom: solid 1px #888;
+	margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+article:last-child {
+	border-bottom: none;
+    padding-bottom: 20px;
+}
+
+article h1 {
+    font-size: 2em;
+    color: var(--blue);
+}
+
+.blink {
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.desno {
+    text-align: right;
+}
+
+.desno a {
+    color: var(--blue);
+}
+
+.projektokvir {
+	margin: 20px 0;
+	padding: 15px;
+    padding-top: 0px;
+	border: solid 1px #333333;
+	background: #242424;
+}
+
+.projektokvir h2 {
+	font-size: 1.6em;
+	color: var(--gray);
+}
+
+.projektokvir a, #newest a {
+	color: var(--blue);
+}
+
+#newest {
+    margin: 10em auto 1em auto;
+    background: var(--bg2);
+    clear: both;
+    width: 50%;
+    padding: 5px 30px 30px 30px;
+}
+
+main>h1:first-child {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+main>p {
+    font-style: italic;
+    text-align: center;
+    clear: both;
+    margin: 0 auto 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray);
+    width: 60%;
+}
+
+/* MEDIA QUERIES */
+
+/* XS devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* S devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* M devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    header {
+        height: 3em;
+    }
+    main {
+        margin: 4em auto 1em auto;
+    }
+    #logo {
+        display: block;
+        float: left;
+        height: 100%;
+        margin-left: 0;
+    }
+    nav {
+        float: right;
+        margin: 1em auto 0 auto;
+        height: 100%;
+    }
+}
+
+/* L devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* XL devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

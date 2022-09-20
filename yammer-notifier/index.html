@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>.disclaimer { display: none; }</style>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/xFNtjBP/logo.png">
+        <title>Yammer Notifier</title>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script>
+            var blink_speed = 550;
+            var t = setInterval(function(){
+                var elem = document.getElementsByClassName('blink');
+                for (var i = 0; i < elem.length; i++) {
+                    elem[i].style.visibility = (elem[i].style.visibility == 'hidden' ? '' : 'hidden');
+                }
+            }, blink_speed);
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="../"><img id="logo" src="https://i.ibb.co/Nnt128D/img.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="#oprojektu">O Projektu</a></li>
+                    <li><a href="#verzije">Verzije Programa</a></li>
+                    <li><a href="../">Naslovna</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Yammer Notifier</h1>
+            <hr>
+            <article id="oprojektu">
+                <h1><span class="lightblue">C:\></span> O Projektu <span class="blink">_</span></h1>
+                <p>
+                    Primjetio sam kako mi ne dolaze notifikacije sa Microsoftove platforme "Yammer" tako da sam odlučio napraviti sam svoj program sa kojim provjeravam ima li novih notifikacija. Bio je jako zanimljiv projekt za mene i jako sam puno naučio novih stvari.</p>
+            </article>
+            <article id="verzije">
+                <h1><span class="lightblue">C:\></span> Verzije Programa <span class="blink">_</span></h1>
+                <p>
+                Koristim Yammerom built in API. Prva verzija koristi token koji možemo dobiti pomoću "Cookie editora" na Yammerovoj stranici (OPASNOST! Nemojte nikome dati taj token jer tada ima FULL ACCESS na vač AAIEDU račun!), Yammer Group ID te sa tim podatcima mogu koristiti Yammerov API da pošaljem GET Request na "/messages/in_group/GROUPID.json" API Endpoint, te sa tim podatcima izvadimo zadnju poslanu poruku, ako je ista kao i zadnja spremljena nastavljamo dalje, ali ako nije python skripta pokreće "sound.mp3" zvuk i ako smo stavili opciju "Auto Like" moj bot automatski like-a post u toj grupi. Za "Auto Like" pošaljem POST Request na Yammerov "/messages/liked_by/current.json" API Endpoint. Postupak se ponavlja svakih "Timeout" sekundi. Source Code je na mom Githubu <a href="https://github.com/TheWoozoo12/YammerNotification" style="color: #348ceb">GITHUB SORUCE CODE</a>
+                </p>
+                <iframe width="480" height="270" src="https://www.youtube.com/embed/6Gv-TSOjB0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Druga verzija je ista kao i prijašnja samo što sam ubacio da mi pošalje poruku na Discord Webhook što je jako korisno jer tada mogu dobiti tu notifikaciju makar sam bilo gdje u svijetu. <a href="https://github.com/TheWoozoo12/YammerToDiscord" style="color: #348ceb">GITHUB SORUCE CODE</a></p>
+                <iframe width="480" height="270" src="https://www.youtube.com/embed/7BvXAVXyX_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                <p>Primjetio sam da nakon nekog vremena se moja python skripta crasha (python je ipak python) pa sam odlučio je svu prepisati u Node JS jezik jer je on namjenjen za 24/7 operaciju. <a href="https://github.com/TheWoozoo12/YammerToDiscordNodeJS" style="color: #348ceb">GITHUB SORUCE CODE</a></p>
+                <iframe width="480" height="270" src="https://www.youtube.com/embed/hb34hTSjFN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            </article>
+        </main>
+        <footer>
+            <p>&copy; Antun Nitraj - Blog 2022</p>
+            <p>Tehničar za računalstvo - <a href="https://tehnickaskola.net">Tehnička škola Požega</a></p>
+        </footer>
+    </body>
+</html>
