@@ -35,7 +35,7 @@ function tuiHandler(e){
                 document.getElementById("terminal").appendChild(createEcho("pong!"));
                 break;
             case "whoami":
-                document.getElementById("terminal").appendChild(createEcho('\nantun@' + hostname + "\n----------------------------\nhi i am antun c:\n\n"));
+                document.getElementById("terminal").appendChild(createEcho('\nantun@' + hostname + "\n----------------------------\nHello! My name is Antun\n\n"));
                 break;
             case "su":
                 user = command.toLowerCase().split(' ')[1];
